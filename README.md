@@ -23,9 +23,9 @@ pcc init ./my-new-site --template=nextjs
 
 2. Follow the prompts in your terminal to complete the setup.
 
-## Pantheon's @pantheon-systems/pcc-react-sdk
+## Pantheon's @pantheon-systems/cpub-react-sdk
 
-Pantheon's @pantheon-systems/pcc-react-sdk is included as a dependency in this
+Pantheon's @pantheon-systems/cpub-react-sdk is included as a dependency in this
 project.
 
 ## Tests

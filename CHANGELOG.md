@@ -10,4 +10,4 @@
 
 - Updated dependencies [8461c3d]
 - Updated dependencies
-  - @pantheon-systems/pcc-react-sdk@1.0.0
+  - @pantheon-systems/cpub-react-sdk@1.0.0
