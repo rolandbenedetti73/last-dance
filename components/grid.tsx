@@ -80,6 +80,7 @@ function withImageSizeParams(
     );
     u.searchParams.set("width", width.toString());
     u.searchParams.set("height", height.toString());
+    u.searchParams.set("smart", "true");
     return u.toString();
   } catch {
     // If url is not valid, return as is
