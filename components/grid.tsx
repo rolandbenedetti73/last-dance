@@ -4,7 +4,7 @@ import type {
 } from "@pantheon-systems/cpub-react-sdk";
 import { getArticleURLFromSite } from "@pantheon-systems/cpub-react-sdk/server";
 import Link from "next/link";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
 
@@ -153,11 +153,17 @@ function GridItemCoverImage({
   imageAltText?: string | null | undefined;
 }) {
   const [hasLoaded, setHasLoaded] = useState(false);
+  const imgRef = useCallback((node: HTMLImageElement | null) => {
+    if (node?.complete) {
+      setHasLoaded(true);
+    }
+  }, []);
 
   return (
     <>
       {imageSrc != null ? (
         <img
+          ref={imgRef}
           src={imageSrc}
           alt={imageAltText || undefined}
           onLoad={() => setHasLoaded(true)}
