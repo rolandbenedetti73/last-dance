@@ -24,7 +24,7 @@ interface Props {
   site: Site;
 }
 
-export default function ArticleList({
+export default function ArticleListNoSmart({
   headerText,
   articles,
   totalCount,
@@ -130,8 +130,9 @@ export default function ArticleList({
             <ArticleGridCard
               key={article.id}
               article={article}
-              basePath={"/articles"}
+              basePath={"/dumb-articles"}
               site={site}
+              useSmart={false}
             />
           ))}
           {skeletonCards.map((x, i) => (

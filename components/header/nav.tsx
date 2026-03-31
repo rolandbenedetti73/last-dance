@@ -17,7 +17,11 @@ export const navItems = {
     },
     {
       href: "/articles",
-      label: "Articles",
+      label: "Articles (Smart Crop)",
+    },
+    {
+      href: "/dumb-articles",
+      label: "Articles (No Smart Crop)",
     },
   ],
   buttons: [
